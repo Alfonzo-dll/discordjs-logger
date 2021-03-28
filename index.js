@@ -154,17 +154,5 @@ client.on('channelDelete', async (channel) => {
 	
 })
 
-client.on('guildMemberAdd', async (member) => {
-	const channelLog = client.channels.cache.get(logChannel)
-
-	member.roles.add('821348466990907412')
-
-	const Embed = new Discord.MessageEmbed()
-	.setColor('BLUE')
-	.setDescription(`${member} aramıza katıldı!`)
-
-	channelLog.send({ embed: Embed })
-})
-
 
 client.login(token)
